@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincode Lookup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pincode Lookup</h1>
+    <form id="pincodeForm">
+        <input type="text" id="pincodeInput" placeholder="Enter 6-digit Pincode" pattern="\d{6}">
+        <button type="submit">Lookup</button>
+    </form>
+
+    <!-- <input type="text" id="filterInput" placeholder="Filter by Post Office Name"> -->
+
+    <div class="loader"></div>
+
+    <div class="results" id="results"></div>
+
+    <div class="error" id="error"></div>
+    <script src="script.js"></script>
+</body>
+</html>
