@@ -1,25 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pincodeInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#pincodeInput::placeholder {
+    color: black;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 40px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
 .loader {
-  border: 4px solid #f3f3f3; /* Light grey */
-  border-top: 4px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
-  margin: 20px auto;
-  display: none; /* Initially hide loader */
+    display: none; 
+    margin: 20px auto;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+
+.results, .error {
+    margin-top: 20px;
+    text-align: center;
 }
 
-/* CSS for results container */
-.results {
-  margin-top: 20px;
+.post-office {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
 }
 
-/* CSS for error message */
-.error {
-  color: red;
+.post-office p {
+    margin-bottom: 5px;
 }

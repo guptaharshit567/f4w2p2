@@ -1,6 +1,5 @@
 const form = document.getElementById('pincodeForm');
 const pincodeInput = document.getElementById('pincodeInput');
-const filterInput = document.getElementById('filterInput');
 const loader = document.querySelector('.loader');
 const resultsDiv = document.getElementById('results');
 const errorDiv = document.getElementById('error');
@@ -16,7 +15,7 @@ form.addEventListener('submit', async (e) => {
     loader.style.display = 'block';
 
     try {
-        const response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
+        const response = await fetch(https://api.postalpincode.in/pincode/${pincode});
         const data = await response.json();
 
         if (data[0].Status === 'Error') {
@@ -29,10 +28,6 @@ form.addEventListener('submit', async (e) => {
     } finally {
         loader.style.display = 'none';
     }
-});
-
-filterInput.addEventListener('input', () => {
-    filterResults();
 });
 
 function displayResults(postOffices) {
@@ -62,24 +57,4 @@ function clearError() {
     errorDiv.textContent = '';
 }
 
-function filterResults() {
-    const searchTerm = filterInput.value.trim().toLowerCase();
-    const postOffices = document.querySelectorAll('.post-office');
-    let found = false;
-
-    postOffices.forEach(postOffice => {
-        const text = postOffice.textContent.toLowerCase();
-        if (text.includes(searchTerm)) {
-            postOffice.style.display = 'block';
-            found = true;
-        } else {
-            postOffice.style.display = 'none';
-        }
-    });
-
-    if (!found) {
-        showError("Couldn't find the postal data you're looking for…");
-    } else {
-        clearError();
-    }
-}
+// Event listener for filter input - Removed because filterInput element is not present in the HTML
